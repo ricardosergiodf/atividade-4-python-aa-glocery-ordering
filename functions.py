@@ -81,7 +81,6 @@ def community_login(bot, community_login_btn):
 
         logging.info("Se tiver o botao de cookies, captura e clica em aceitar.")
         cookie_btn = bot.find_element("onetrust-accept-btn-handler", By.ID)
-
         if cookie_btn:
             cookie_btn.click()
 
@@ -95,6 +94,7 @@ def community_login(bot, community_login_btn):
         email_field = bot.find_element("/html[1]/body[1]/div[3]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]", By.XPATH)
         email_field.send_keys(email)
 
+        logging.info("Clica em next.")
         next_btn = bot.find_element("button[type='button']", By.CSS_SELECTOR)
         next_btn.click()
         bot.wait(1000)
@@ -139,8 +139,12 @@ def shopping_list(bot):
             logging.info(f"Adiciona {row['Favorite Food']} na lista.")
             enter_item.send_keys(row['Favorite Food'])
             # bot.driver.execute_script("document.querySelector('#add_button').click();")
-            logging.info("Clica em adicionar item.")
-            add_btn.click()
+            if add_btn.is_enabled():
+                logging.info("Clica em adicionar item.")
+                add_btn.click()
+            else:
+                logging.warning("O botão de adicionar item esta desabilitado.")
+                
 
         logging.info("Captura e aceita o input dos termos.")
         agree_terms = bot.find_element("#agreeToTermsYes", By.CSS_SELECTOR)

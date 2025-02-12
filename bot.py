@@ -43,9 +43,9 @@ def main():
     else:
         logging.info("Shopping list feito com sucesso.")
 
-    logging.info("Fim.")
-
     browse_close(bot)
+
+    logging.info("Fim.")
 
 
 def not_found(label):
