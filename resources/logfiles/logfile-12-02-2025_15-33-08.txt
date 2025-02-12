@@ -1,0 +1,8 @@
+(12/02/2025 15:33:08) - INFO - Inicio - Atividade 4 - Python & Automation Anywhere - Glocery Shopping
+(12/02/2025 15:33:08) - INFO - Maestro desativado -> Executando localmente
+(12/02/2025 15:33:08) - INFO - Abrindo Browser na URL: https://pathfinder.automationanywhere.com/challenges/AutomationAnywhereLabs-ShoppingList.html
+(12/02/2025 15:33:11) - INFO - Carrega as credenciais salvas no .env
+(12/02/2025 15:33:12) - INFO - Carrega o email e senha do .env.
+(12/02/2025 15:33:19) - INFO - Clica no botao de login.
+(12/02/2025 15:33:20) - INFO - Community Login feito com sucesso.
+(12/02/2025 15:33:47) - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))': /session/23683bd4ab4a6d4327ca4c4b40372ad0

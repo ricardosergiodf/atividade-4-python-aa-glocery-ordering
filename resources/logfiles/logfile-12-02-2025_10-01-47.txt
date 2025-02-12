@@ -1,0 +1,8 @@
+(12/02/2025 10:01:47) - INFO - Inicio - Atividade 4 - Python & Automation Anywhere
+(12/02/2025 10:01:47) - INFO - Maestro desativado -> Executando localmente
+(12/02/2025 10:01:47) - INFO - Abrindo Browser na URL: https://pathfinder.automationanywhere.com/challenges/AutomationAnywhereLabs-ShoppingList.html
+(12/02/2025 10:01:53) - INFO - Carrega as credenciais salvas no .env
+(12/02/2025 10:02:01) - INFO - Community Login feito com sucesso.
+(12/02/2025 10:10:02) - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None)': /session/cc07cb69064f4aed172d9f7c7a14a6d2
+(12/02/2025 10:10:06) - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D1F9F7AA70>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/cc07cb69064f4aed172d9f7c7a14a6d2
+(12/02/2025 10:10:10) - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D1F9F7AF50>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/cc07cb69064f4aed172d9f7c7a14a6d2
