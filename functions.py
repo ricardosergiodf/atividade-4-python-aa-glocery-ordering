@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 from botcity.maestro import *
 from dotenv import load_dotenv
+from selenium.webdriver.common.keys import Keys
 
 def setup_logging():
     log_path = "C:/Users/ricar/Desktop/-/Compass/atividades-praticas-compass/Sprint-4/ativ-pratica-4-python-aa/resources/logfiles"
@@ -49,8 +50,9 @@ def browse_url(bot, url):
 
 def browse_close(bot):
     try:
+        bot.key_esc()
         logging.info("Fechando Browser.")
-        return bot.stop_browser()
+        return bot.driver.quit()
     except Exception:
         error_exception()
         return False
@@ -114,8 +116,20 @@ def community_login(bot, community_login_btn):
 
 def shopping_list(bot):
     try:
+        bot.wait(1500)
+        add_btn = bot.find_element("#add_button", By.CSS_SELECTOR)
+        bot.wait(1500)
+        add_btn.click()
+        try:
+            alert = bot.driver.switch_to.alert
+            logging.info(f"Fechando o popup: {alert.text}")
+            if alert:
+                alert.accept()
+        except Exception:
+            logging.info("Popup nao encontrado.")
+
         logging.info("Captura e clica no botao de download.")
-        download_list_btn = bot.find_element("a[role='button']", By.CSS_SELECTOR)
+        download_list_btn = bot.find_element("//a [@class='btn btn-success' and @role='button']", By.XPATH)
         download_list_btn.click()
 
         bot.wait(1000)
@@ -127,18 +141,13 @@ def shopping_list(bot):
         logging.info("Lendo o arquivo csv.")
         shopping_list_csv = pd.read_csv(shopping_list_csv_path)
 
-        # shopping_list = shopping_list_csv["Favorite Food"].tolist()
-
         logging.info("Captura o campo de digitar o item e o botao de adicionar item.")
         enter_item = bot.find_element("#myInput", By.CSS_SELECTOR)
-        add_btn = bot.find_element("#add_button", By.CSS_SELECTOR)
-        # add_btn = bot.find_element("//button [text()='Add Item']", By.XPATH)
-        # add_btn = bot.find_element("/html[1]/body[1]/div[2]/div[1]/form[1]/div[1]/div[2]/button[1]", By.XPATH)
 
         for item, row in shopping_list_csv.iterrows():
             logging.info(f"Adiciona {row['Favorite Food']} na lista.")
             enter_item.send_keys(row['Favorite Food'])
-            # bot.driver.execute_script("document.querySelector('#add_button').click();")
+
             if add_btn.is_enabled():
                 logging.info("Clica em adicionar item.")
                 add_btn.click()
@@ -154,12 +163,7 @@ def shopping_list(bot):
         submit_btn = bot.find_element("#submit_button", By.CSS_SELECTOR)
         submit_btn.click()
 
-        logging.info("Captura o resultado.")
-        result_message = bot.find_element("#success-title", By.CSS_SELECTOR).text
-        if not result_message:
-            raise AttributeError("Elemento 'resultado' nao encontrado, ocorreu algum erro.")
-
-        logging.info(f"Resultado: {result_message}")
+        bot.wait(2000)
 
         return True
     except Exception:

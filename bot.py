@@ -43,7 +43,16 @@ def main():
     else:
         logging.info("Shopping list feito com sucesso.")
 
-    browse_close(bot)
+    logging.info("Captura o resultado.")
+    result_message = bot.find_element("success-title", By.ID).text
+    if not result_message:
+        raise AttributeError("Elemento 'resultado' nao encontrado, ocorreu algum erro.")
+    logging.info(f"Resultado: {result_message}")
+
+    try:
+        browse_close(bot)
+    except Exception:
+        error_exception()
 
     logging.info("Fim.")
 

@@ -1,0 +1,35 @@
+(15/02/2025 20:41:30) - INFO - Inicio - Atividade 4 - Python & Automation Anywhere - Online Glocery Ordering
+(15/02/2025 20:41:30) - INFO - Maestro desativado -> Executando localmente
+(15/02/2025 20:41:30) - INFO - Abrindo Browser na URL: https://pathfinder.automationanywhere.com/challenges/AutomationAnywhereLabs-ShoppingList.html
+(15/02/2025 20:41:33) - INFO - Carrega as credenciais salvas no .env
+(15/02/2025 20:41:33) - INFO - Se tiver o botao de cookies, captura e clica em aceitar.
+(15/02/2025 20:41:33) - INFO - Clica no botao de login.
+(15/02/2025 20:41:41) - INFO - Preenche o email.
+(15/02/2025 20:41:41) - INFO - Clica em next.
+(15/02/2025 20:41:42) - INFO - Preenche a senha.
+(15/02/2025 20:41:42) - INFO - Community Login feito com sucesso.
+(15/02/2025 20:41:48) - INFO - Fechando o popup: You must enter an item!
+(15/02/2025 20:41:48) - INFO - Captura e clica no botao de download.
+(15/02/2025 20:41:50) - INFO - Lendo o arquivo csv.
+(15/02/2025 20:41:50) - INFO - Captura o campo de digitar o item e o botao de adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Oatmeal na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Granola na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Strawberries na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Macaroni and Cheese na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Pizza na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Broccoli na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Adiciona Chicken Nuggets na lista.
+(15/02/2025 20:41:50) - INFO - Clica em adicionar item.
+(15/02/2025 20:41:50) - INFO - Captura e aceita o input dos termos.
+(15/02/2025 20:41:50) - INFO - Captura e clica no botao de submit.
+(15/02/2025 20:41:52) - INFO - Shopping list feito com sucesso.
+(15/02/2025 20:41:52) - INFO - Captura o resultado.
+(15/02/2025 20:41:52) - INFO - Resultado: Well done! Shopping List Challenge Complete!
+(15/02/2025 20:41:53) - INFO - Fechando Browser.
+(15/02/2025 20:41:55) - INFO - Fim.
